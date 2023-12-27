@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="obstacle">
+    <link name="obstacle_center">
+
+  <visual name="obstacle_visual">
+
+    <pose> 0 0 0 0 0 0</pose>
+    <geometry>
+      <sphere>
+          <radius>0.4</radius>
+      </sphere>
+    </geometry>
+
+    <material>
+      <ambient>1 0 0 1</ambient>
+      <diffuse>1 0 0 1</diffuse>
+      <specular>0 0 0 0</specular>
+      <emissive>0 1 0 1</emissive>
+    </material>
+  </visual>
+
+ <collision name="obstacle_collision">
+
+    <pose> 0 0 0 0 0 0</pose>
+    <geometry>
+      <sphere>
+          <radius>0.4</radius>
+      </sphere>
+    </geometry>
+
+  </collision>
+
+</link>
+</model>
+</sdf>

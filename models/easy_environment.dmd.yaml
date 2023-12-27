@@ -1,0 +1,111 @@
+directives:
+
+# Add shelves
+- add_model:
+    name: shelves_1
+    file: package://Shelve_Bot/models/shelve.sdf
+
+- add_frame:
+    name: shelf_1_origin
+    X_PF:
+      base_frame: world
+      translation: [2, 0, 0.758]
+      rotation: !Rpy { deg: [0, 0, 180] }
+
+- add_weld:
+    parent: shelf_1_origin
+    child: shelves_1::shelve_body
+
+- add_model:
+    name: shelves_2
+    file: package://Shelve_Bot/models/shelve.sdf
+
+- add_frame:
+    name: shelf_2_origin
+    X_PF:
+      base_frame: world
+      translation: [0, 2, 0.758]
+      rotation: !Rpy { deg: [0, 0, -90] }
+
+- add_weld:
+    parent: shelf_2_origin
+    child: shelves_2::shelve_body
+
+- add_model:
+    name: shelves_3
+    file: package://Shelve_Bot/models/shelve.sdf
+
+- add_frame:
+    name: shelf_3_origin
+    X_PF:
+      base_frame: world
+      translation: [-2, 0, 0.758]
+      rotation: !Rpy { deg: [0, 0, 0] }
+
+- add_weld:
+    parent: shelf_3_origin
+    child: shelves_3::shelve_body
+
+- add_model:
+    name: shelves_4
+    file: package://Shelve_Bot/models/shelve.sdf
+
+- add_frame:
+    name: shelf_4_origin
+    X_PF:
+      base_frame: world
+      translation: [0, -2, 0.758]
+      rotation: !Rpy { deg: [0, 0, 90] }
+
+- add_weld:
+    parent: shelf_4_origin
+    child: shelves_4::shelve_body
+
+
+- add_model:
+    name: thing_1
+    file: package://Shelve_Bot/models/soup_can_cheat.sdf
+- add_frame:
+    name: thing_1_origin
+    X_PF:
+      base_frame: shelf_1_origin
+      translation: [0, 0, 0.31800000000000006]
+      rotation: !Rpy { deg: [90,0,0] }
+- add_frame:
+    name: thing_1_destination
+    X_PF:
+      base_frame: shelf_2_origin
+      translation: [0, 0, 0.31800000000000006]
+      rotation: !Rpy { deg: [90,0,0] }
+
+- add_model:
+    name: thing_2
+    file: package://Shelve_Bot/models/rubiks_cube_2_by_2.sdf
+- add_frame:
+    name: thing_2_origin
+    X_PF:
+      base_frame: shelf_2_origin
+      translation: [0, 0, 0.2929999999999999]
+      rotation: !Rpy { deg: [0,0,0] }
+- add_frame:
+    name: thing_2_destination
+    X_PF:
+      base_frame: shelf_3_origin
+      translation: [0, 0, 0.2929999999999999]
+      rotation: !Rpy { deg: [0,0,0] }
+
+- add_model:
+    name: thing_3
+    file: package://Shelve_Bot/models/soup_can_cheat.sdf
+- add_frame:
+    name: thing_3_origin
+    X_PF:
+      base_frame: shelf_3_origin
+      translation: [0, 0, 0.31800000000000006]
+      rotation: !Rpy { deg: [90,0,0] }
+- add_frame:
+    name: thing_3_destination
+    X_PF:
+      base_frame: shelf_4_origin
+      translation: [0, 0, 0.31800000000000006]
+      rotation: !Rpy { deg: [90,0,0] }

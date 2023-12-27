@@ -1,0 +1,157 @@
+
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="shelve">
+    <link name="shelve_body">
+    
+      <visual name="right_wall">
+        
+        <pose> 0 0.492 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 0.016 1.516</size>
+          </box>
+        </geometry>
+    
+      </visual>
+     <collision name="right_wall">
+        
+        <pose> 0 0.492 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 0.016 1.516</size>
+          </box>
+        </geometry>
+    
+      </collision>
+    
+      <visual name="left_wall">
+        
+        <pose> 0 -0.492 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 0.016 1.516</size>
+          </box>
+        </geometry>
+    
+      </visual>
+     <collision name="left_wall">
+        
+        <pose> 0 -0.492 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 0.016 1.516</size>
+          </box>
+        </geometry>
+    
+      </collision>
+    
+          <visual name="floor0">
+            
+        <pose> 0 0 -0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 1 0.016</size>
+          </box>
+        </geometry>
+        
+          </visual>
+          <collision name="floor0">
+            
+        <pose> 0 0 -0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 1 0.016</size>
+          </box>
+        </geometry>
+        
+          </collision>
+        
+          <visual name="floor1">
+            
+        <pose> 0 0 -0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 1 0.016</size>
+          </box>
+        </geometry>
+        
+          </visual>
+          <collision name="floor1">
+            
+        <pose> 0 0 -0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 1 0.016</size>
+          </box>
+        </geometry>
+        
+          </collision>
+        
+          <visual name="floor2">
+            
+        <pose> 0 0 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 1 0.016</size>
+          </box>
+        </geometry>
+        
+          </visual>
+          <collision name="floor2">
+            
+        <pose> 0 0 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 1 0.016</size>
+          </box>
+        </geometry>
+        
+          </collision>
+        
+          <visual name="floor3">
+            
+        <pose> 0 0 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 1 0.016</size>
+          </box>
+        </geometry>
+        
+          </visual>
+          <collision name="floor3">
+            
+        <pose> 0 0 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 1 0.016</size>
+          </box>
+        </geometry>
+        
+          </collision>
+        
+      <visual name="back">
+        
+        <pose> -0.192 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.016 1 1.516</size>
+          </box>
+        </geometry>    
+    
+      </visual>
+     <collision name="back">
+        
+        <pose> -0.192 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.016 1 1.516</size>
+          </box>
+        </geometry>    
+    
+      </collision>
+    
+    </link>
+  </model>
+</sdf>
+    

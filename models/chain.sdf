@@ -1,0 +1,298 @@
+
+    <?xml version="1.0" ?>
+    <sdf version="1.7">
+        <model name="chain_n=4">
+    
+            <joint name="joint_n_0" type="ball">
+                <parent>link0</parent>
+                <child>sphere0</child>
+                <pose>0 0 0 0 0 0</pose>
+            </joint>
+        
+    <link name="link0">
+        <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+        <inertial>
+            <pose>0 0 0.05 0 0 0</pose>
+            <mass>0.1</mass>
+            <inertia>
+            <ixx>0.1</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+                            <iyy>0.1</iyy><iyz>0.0</iyz>
+                                        <izz>0.01</izz>
+            </inertia>
+        </inertial>
+        <visual name="visual_box0">
+            <pose>0 0 0.05 0 0 0</pose>
+            <geometry>
+            <box>
+                <size>0.1 0.1 0.1</size>
+            </box>
+            </geometry>
+        </visual>
+        <collision name="collision_box0">
+            <pose>0 0 0.05 0 0 0</pose>
+            <geometry>
+            <box>
+                <size>0.1 0.1 0.1</size>
+            </box>
+            </geometry>
+            <drake:proximity_properties>
+                <drake:compliant_hydroelastic/>
+                <drake:hydroelastic_modulus>1.0e8</drake:hydroelastic_modulus>
+            </drake:proximity_properties>
+        </collision>
+    </link>
+    
+    <link name="sphere0">
+        <pose>0.0 0.0 0.15000000000000002 0.0 -0.0 0.0</pose>
+        <inertial>
+            <mass>0.1</mass>
+        </inertial>
+        <visual name="visual_sphere0">
+            <geometry>
+            <sphere>
+                <radius>0.05</radius>
+            </sphere>
+            </geometry>
+        </visual>
+        <collision name="collision_sphere0">
+            <geometry>
+            <sphere>
+                <radius>0.05</radius>
+            </sphere>
+            </geometry>
+
+            <drake:proximity_properties>
+                <drake:compliant_hydroelastic/>
+                <drake:mesh_resolution_hint>0.1</drake:mesh_resolution_hint>
+                <drake:hydroelastic_modulus>5e7</drake:hydroelastic_modulus>
+                <drake:hunt_crossley_dissipation>1.25</drake:hunt_crossley_dissipation>
+            </drake:proximity_properties>
+
+        </collision>
+    </link>
+    
+                <joint name="joint_p_1" type="ball">
+                    <parent>sphere0</parent>
+                    <child>link1</child>
+                    <pose>0 0 -0.05 0 0 0</pose>
+                </joint>
+            
+            <joint name="joint_n_1" type="ball">
+                <parent>link1</parent>
+                <child>sphere1</child>
+                <pose>0 0 0 0 0 0</pose>
+            </joint>
+        
+    <link name="link1">
+        <pose>0.047949287224397265 0.0016328947014036422 0.16407833475828662 0.8620742360644782 1.123416829660566 0.9468184970598288</pose>
+        <inertial>
+            <pose>0 0 0.05 0 0 0</pose>
+            <mass>0.1</mass>
+            <inertia>
+            <ixx>0.1</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+                            <iyy>0.1</iyy><iyz>0.0</iyz>
+                                        <izz>0.01</izz>
+            </inertia>
+        </inertial>
+        <visual name="visual_box1">
+            <pose>0 0 0.05 0 0 0</pose>
+            <geometry>
+            <box>
+                <size>0.1 0.1 0.1</size>
+            </box>
+            </geometry>
+        </visual>
+        <collision name="collision_box1">
+            <pose>0 0 0.05 0 0 0</pose>
+            <geometry>
+            <box>
+                <size>0.1 0.1 0.1</size>
+            </box>
+            </geometry>
+            <drake:proximity_properties>
+                <drake:compliant_hydroelastic/>
+                <drake:hydroelastic_modulus>1.0e8</drake:hydroelastic_modulus>
+            </drake:proximity_properties>
+        </collision>
+    </link>
+    
+    <link name="sphere1">
+        <pose>0.19179714889758906 0.006531578805614569 0.20631333903314644 0.8620742360644782 1.123416829660566 0.9468184970598288</pose>
+        <inertial>
+            <mass>0.1</mass>
+        </inertial>
+        <visual name="visual_sphere1">
+            <geometry>
+            <sphere>
+                <radius>0.05</radius>
+            </sphere>
+            </geometry>
+        </visual>
+        <collision name="collision_sphere1">
+            <geometry>
+            <sphere>
+                <radius>0.05</radius>
+            </sphere>
+            </geometry>
+
+            <drake:proximity_properties>
+                <drake:compliant_hydroelastic/>
+                <drake:mesh_resolution_hint>0.1</drake:mesh_resolution_hint>
+                <drake:hydroelastic_modulus>5e7</drake:hydroelastic_modulus>
+                <drake:hunt_crossley_dissipation>1.25</drake:hunt_crossley_dissipation>
+            </drake:proximity_properties>
+
+        </collision>
+    </link>
+    
+                <joint name="joint_p_2" type="ball">
+                    <parent>sphere1</parent>
+                    <child>link2</child>
+                    <pose>0 0 -0.05 0 0 0</pose>
+                </joint>
+            
+            <joint name="joint_n_2" type="ball">
+                <parent>link2</parent>
+                <child>sphere2</child>
+                <pose>0 0 0 0 0 0</pose>
+            </joint>
+        
+    <link name="link2">
+        <pose>0.22768115363930522 0.01981053258943618 0.17412626724797745 2.3208319509494126 0.335133181684621 2.222557694732438</pose>
+        <inertial>
+            <pose>0 0 0.05 0 0 0</pose>
+            <mass>0.1</mass>
+            <inertia>
+            <ixx>0.1</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+                            <iyy>0.1</iyy><iyz>0.0</iyz>
+                                        <izz>0.01</izz>
+            </inertia>
+        </inertial>
+        <visual name="visual_box2">
+            <pose>0 0 0.05 0 0 0</pose>
+            <geometry>
+            <box>
+                <size>0.1 0.1 0.1</size>
+            </box>
+            </geometry>
+        </visual>
+        <collision name="collision_box2">
+            <pose>0 0 0.05 0 0 0</pose>
+            <geometry>
+            <box>
+                <size>0.1 0.1 0.1</size>
+            </box>
+            </geometry>
+            <drake:proximity_properties>
+                <drake:compliant_hydroelastic/>
+                <drake:hydroelastic_modulus>1.0e8</drake:hydroelastic_modulus>
+            </drake:proximity_properties>
+        </collision>
+    </link>
+    
+    <link name="sphere2">
+        <pose>0.3353331678644537 0.05964739394090101 0.07756505189247048 2.3208319509494126 0.335133181684621 2.222557694732438</pose>
+        <inertial>
+            <mass>0.1</mass>
+        </inertial>
+        <visual name="visual_sphere2">
+            <geometry>
+            <sphere>
+                <radius>0.05</radius>
+            </sphere>
+            </geometry>
+        </visual>
+        <collision name="collision_sphere2">
+            <geometry>
+            <sphere>
+                <radius>0.05</radius>
+            </sphere>
+            </geometry>
+
+            <drake:proximity_properties>
+                <drake:compliant_hydroelastic/>
+                <drake:mesh_resolution_hint>0.1</drake:mesh_resolution_hint>
+                <drake:hydroelastic_modulus>5e7</drake:hydroelastic_modulus>
+                <drake:hunt_crossley_dissipation>1.25</drake:hunt_crossley_dissipation>
+            </drake:proximity_properties>
+
+        </collision>
+    </link>
+    
+                <joint name="joint_p_3" type="ball">
+                    <parent>sphere2</parent>
+                    <child>link3</child>
+                    <pose>0 0 -0.05 0 0 0</pose>
+                </joint>
+            
+            <joint name="joint_n_3" type="ball">
+                <parent>link3</parent>
+                <child>sphere3</child>
+                <pose>0 0 0 0 0 0</pose>
+            </joint>
+        
+    <link name="link3">
+        <pose>0.3349778829866034 0.10869938770509202 0.08724883629802906 1.2746766261997409 -0.8450384884884753 -2.9099858083750036</pose>
+        <inertial>
+            <pose>0 0 0.05 0 0 0</pose>
+            <mass>0.1</mass>
+            <inertia>
+            <ixx>0.1</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+                            <iyy>0.1</iyy><iyz>0.0</iyz>
+                                        <izz>0.01</izz>
+            </inertia>
+        </inertial>
+        <visual name="visual_box3">
+            <pose>0 0 0.05 0 0 0</pose>
+            <geometry>
+            <box>
+                <size>0.1 0.1 0.1</size>
+            </box>
+            </geometry>
+        </visual>
+        <collision name="collision_box3">
+            <pose>0 0 0.05 0 0 0</pose>
+            <geometry>
+            <box>
+                <size>0.1 0.1 0.1</size>
+            </box>
+            </geometry>
+            <drake:proximity_properties>
+                <drake:compliant_hydroelastic/>
+                <drake:hydroelastic_modulus>1.0e8</drake:hydroelastic_modulus>
+            </drake:proximity_properties>
+        </collision>
+    </link>
+    
+    <link name="sphere3">
+        <pose>0.3339120283530525 0.25585536899766503 0.11630018951470478 1.2746766261997409 -0.8450384884884753 -2.9099858083750036</pose>
+        <inertial>
+            <mass>0.1</mass>
+        </inertial>
+        <visual name="visual_sphere3">
+            <geometry>
+            <sphere>
+                <radius>0.05</radius>
+            </sphere>
+            </geometry>
+        </visual>
+        <collision name="collision_sphere3">
+            <geometry>
+            <sphere>
+                <radius>0.05</radius>
+            </sphere>
+            </geometry>
+
+            <drake:proximity_properties>
+                <drake:compliant_hydroelastic/>
+                <drake:mesh_resolution_hint>0.1</drake:mesh_resolution_hint>
+                <drake:hydroelastic_modulus>5e7</drake:hydroelastic_modulus>
+                <drake:hunt_crossley_dissipation>1.25</drake:hunt_crossley_dissipation>
+            </drake:proximity_properties>
+
+        </collision>
+    </link>
+    
+        </model>
+    </sdf>
+    

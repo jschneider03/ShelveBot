@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="floor">
+    <!-- note that there is (intentionally) no visual geometry; only collision
+    geometry -->
+    <link name="box">
+      <inertial>
+        <mass>100.0</mass>
+        <inertia>
+          <ixx>10</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>10</iyy>
+          <iyz>0</iyz>
+          <izz>10</izz>
+        </inertia>
+      </inertial>
+      <collision name="bottom">
+        <pose>0 0 -0.1 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>16 16 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="bottom">
+        <pose>0 0 -0.1 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>16 16 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 1 0 .1</ambient>
+          <diffuse>1 1 0 .1</diffuse>
+        </material>
+
+      </visual>
+      <collision name="front">
+        <pose>8 0 .15 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>.1 4 0.3</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="back">
+        <pose>-8 0 .15 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>.1 4 0.3</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="left">
+        <pose>0 8 .15 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>4 .1 0.3</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="right">
+        <pose>0 -8 .15 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>4 .1 0.3</size>
+          </box>
+        </geometry>
+      </collision>
+
+    </link>
+  </model>
+</sdf>

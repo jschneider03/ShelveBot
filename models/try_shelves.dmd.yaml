@@ -1,0 +1,16 @@
+directives:
+# Add shelves
+- add_model:
+    name: shelves_1
+    file: package://Shelve_Bot/models/shelves.sdf
+#    default_free_body_pose:
+#        shelve_body: # Change here!
+#            translation: [0, 0, 1]
+#            rotation: !Rpy { deg: [0, 0, 0] }
+
+- add_weld:
+    parent: world
+    child: shelves_1::shelve_body
+    X_PC:
+        translation: [0, 0, 0.5]
+        rotation: !Rpy { deg: [0, 0, 0] }

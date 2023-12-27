@@ -1,0 +1,10 @@
+# Model directive for pr2 with sphere collision and welded gripper
+directives:
+
+# Add pr2
+- add_model:
+    name: pr2
+    file: package://Shelve_Bot/models/pr2_collision_fixed.urdf  # this should be pr2 from our local path
+# Add pr2 driver
+model_drivers: 
+    pr2: !InverseDynamicsDriver {}
